@@ -104,9 +104,9 @@ export default function AppHard() {
             {error && <div className="error-message">{error}</div>}
             <BoardHard />
             <div className="difficulty-buttons">
-              <button onClick={() => window.location.href = '/game/hard'}>
-                Reset
-              </button>
+              <Link to="/game/hard">
+                <button>Reset</button>
+              </Link>
             </div>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>

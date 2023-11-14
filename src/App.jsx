@@ -103,9 +103,9 @@ export default function App() {
             {error && <div className="error-message">{error}</div>}
             <Board />
             <div className="difficulty-buttons">
-              <button onClick={() => window.location.href = '/game/normal'}>
-                Reset
-              </button>
+              <Link to="/game/normal">
+                <button>Reset</button>
+              </Link>
             </div>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>
