@@ -1,4 +1,5 @@
 import './index.css';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 
 export default function Home() {
@@ -14,12 +15,12 @@ export default function Home() {
         </p>
         <p>Choose a difficulty level to start playing!</p>
         <div className="difficulty-buttons">
-          <button onClick={() => window.location.href = '/game/normal'}>
-            Normal
-          </button>
-          <button onClick={() => window.location.href = '/game/hard'}>
-            Hard
-          </button>
+          <Link to="/game/normal">
+            <button>Normal</button>
+          </Link>
+          <Link to="/game/hard">
+            <button>Hard</button>
+          </Link>
         </div>
       </div>
     </div>
