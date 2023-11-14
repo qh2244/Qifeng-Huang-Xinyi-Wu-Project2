@@ -3,6 +3,7 @@ import BoardHard from "./ComponentsHard/BoardHard";
 import Keyboard from "./ComponentsHard/KeyBoard";
 import { boardDefault, generateWordSet } from "./ComponentsHard/WordsHard";
 import { useState, createContext, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import GameOver from "./ComponentsHard/GameOver";
 import Header from "./Header";
 
