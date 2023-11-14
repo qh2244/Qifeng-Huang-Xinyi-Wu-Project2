@@ -65,6 +65,7 @@ export default function AppHard() {
     newBoard[currAttempt.attempt][currAttempt.letter - 1] = "";
     setBoard(newBoard);
     setCurrAttempt({ ...currAttempt, letter: currAttempt.letter - 1 });
+    setError(null);
   };
 
   const onSelectLetter = (key) => {
@@ -76,6 +77,7 @@ export default function AppHard() {
       attempt: currAttempt.attempt,
       letter: currAttempt.letter + 1,
     });
+    setError(null);
   };
 
   return (
