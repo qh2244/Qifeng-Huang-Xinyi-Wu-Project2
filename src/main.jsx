@@ -9,8 +9,8 @@ import Rules from './rules.jsx'
 
 const router = createBrowserRouter([
   {
-    path: 'https://qifeng-huang-xinyi-wu-project2.onrender.com/',
-    element: <App />
+    path: '/',
+    element: <Home />
   },
   {
     path: '/rules',
