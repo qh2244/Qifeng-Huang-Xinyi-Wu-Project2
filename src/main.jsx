@@ -8,10 +8,10 @@ import AppHard from './AppHard.jsx'
 import Rules from './rules.jsx'
 
 const router = createBrowserRouter([
-  // {
-  //   path: '/',
-  //   element: <Home />
-  // },
+  {
+    path: 'https://qifeng-huang-xinyi-wu-project2.onrender.com/',
+    element: <App />
+  },
   {
     path: '/rules',
     element:<Rules />
