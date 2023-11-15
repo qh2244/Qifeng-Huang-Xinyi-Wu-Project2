@@ -33,8 +33,9 @@ h1{
 }
 
 .row {
-  flex: 33%;
+  /* flex: 33%; */
   display: flex;
+  height: 30px;
   flex-direction: row;
   margin: 5px;
 }
@@ -118,4 +119,27 @@ h1{
 }
 #disabled {
   background-color: #3a393c;
+}
+
+@media only screen and (max-width: 600px){
+  .board {
+    width: 80%;
+    height: 80%;
+    max-width: none;
+  }
+
+
+  .keyboard {
+    width: 90%;
+    max-width: none;
+  }
+
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
 }
