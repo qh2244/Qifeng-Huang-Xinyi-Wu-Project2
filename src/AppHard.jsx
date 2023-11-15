@@ -3,7 +3,6 @@ import BoardHard from "./ComponentsHard/BoardHard";
 import Keyboard from "./ComponentsHard/KeyBoard";
 import { boardDefault, generateWordSet } from "./ComponentsHard/WordsHard";
 import { useState, createContext, useEffect } from "react";
-import { Link } from 'react-router-dom';
 import GameOver from "./ComponentsHard/GameOver";
 import Header from "./Header";
 
@@ -105,9 +104,9 @@ export default function AppHard() {
             {error && <div className="error-message">{error}</div>}
             <BoardHard />
             <div className="difficulty-buttons">
-              <Link to="/game/hard">
-                <button>Reset</button>
-              </Link>
+              <button onClick={() => window.location.reload()}>
+                Reset
+              </button>
             </div>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>
