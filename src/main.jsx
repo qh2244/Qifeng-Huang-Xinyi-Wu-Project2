@@ -8,10 +8,10 @@ import AppHard from './AppHard.jsx'
 import Rules from './rules.jsx'
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
+  // {
+  //   path: '/',
+  //   element: <Home />
+  // },
   {
     path: '/rules',
     element:<Rules />
