@@ -15,7 +15,6 @@ export default function App() {
   const [correctWord, setCorrectWord] = useState("");
   const [error, setError] = useState(null);
   const [disabledLetters, setDisabledLetters] = useState([]);
-  const [resetTrigger, setResetTrigger] = useState(false);
   const [gameOver, setGameOver] = useState({
     gameOver: false,
     guessedWord: false,
@@ -26,7 +25,7 @@ export default function App() {
       setWordSet(words.wordSet);
       setCorrectWord(words.todaysWord);
     });
-  }, [resetTrigger]);
+  }, []);
 
   const onEnter = () => {
     console.log("onEnter called");
@@ -80,10 +79,6 @@ export default function App() {
     setError(null);
   };
 
-  const handleReset = () => {
-    setResetTrigger(!resetTrigger); // Toggle resetTrigger to force a rerender
-  };
-
   return (
     <div>
       <Header />
@@ -108,9 +103,9 @@ export default function App() {
             {error && <div className="error-message">{error}</div>}
             <Board />
             <div className="difficulty-buttons">
-              <button onClick={handleReset}>
-                Reset
-              </button>
+            <button onClick={() => window.location.reload()}>
+              Reset
+            </button>
             </div>
             {gameOver.gameOver ? <GameOver /> : <Keyboard />}
           </div>
